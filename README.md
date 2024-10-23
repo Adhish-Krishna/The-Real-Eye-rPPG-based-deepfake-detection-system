@@ -1,6 +1,6 @@
 # The Real Eye: A rPPG Based Multi-Model Deepfake Detection System
 
-![Header](./images/dibujo.png)
+![Header](./images/The%20Real%20Eye%20Poster.png)
 
 ## The Real Eye: A rPPG Based Multi-Model Deepfake Detection System is based on the research paper [DeepFakesON-Phys: DeepFakes Detection based on Heart Rate Estimation](https://arxiv.org/pdf/2010.00400.pdf)
 
