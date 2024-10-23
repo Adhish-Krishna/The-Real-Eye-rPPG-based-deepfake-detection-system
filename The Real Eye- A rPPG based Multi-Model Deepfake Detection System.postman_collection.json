@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "c534bb95-2927-42e2-a667-a67acca719d9",
+		"name": "The Real Eye: A rPPG based Multi-Model Deepfake Detection System",
+		"description": "**The Real Eye** is a **rPPG (remote Photoplethysmography)** based **Multi-Model (both audio and video) Deepfake Detection System.** It is based on the research paper **DeepFakesON-Phys: DeepFakes Detection based on Heart Rate Estimation.**\n\n**The Real** **Eye** follows a **micro-service approach**. It has two services. One is **Video Deepfake Detection Service**. Another is a **Audio Deepfake Detection Service.**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33146027"
+	},
+	"item": [
+		{
+			"name": "Video Deepfake Detection Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/B:/College Projects/The Real Eye rPPG based deepfake detection system/test_videos/00012.avi"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/upload",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"upload"
+					]
+				},
+				"description": "Attach video file in the body part of request in form-data to detect deepfakes in the video.\n\nThe response will include the prediction and videofile name as a json."
+			},
+			"response": []
+		},
+		{
+			"name": "Audio Deepfake Detection Service",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/B:/College Projects/The Real Eye rPPG based deepfake detection system/Audio Deepfake Detection Service/TestEvaluation/LA_E_1000147.flac"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/classify",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"classify"
+					]
+				},
+				"description": "Attach audio file in the body part of request in form-data to detect deepfakes in the audio.\n\nThe response will include the prediction as a json"
+			},
+			"response": []
+		}
+	]
+}

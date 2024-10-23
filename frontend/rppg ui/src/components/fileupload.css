@@ -1,0 +1,133 @@
+/* Main layout and background */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+
+.bg-gradient-to-br {
+  background: linear-gradient(to bottom right, #1E3A8A, #6D28D9, #4B5563);
+}
+
+.min-h-screen {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Particle background canvas */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+/* Card style */
+.card {
+  position: relative;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  border: 2px dashed rgba(107, 114, 128, 0.4); /* Light gray */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: #3B82F6; /* Hover border blue */
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+}
+
+/* Progress bar */
+.progress-bar-container {
+  width: 100%;
+  height: 10px;
+  background-color: rgba(107, 114, 128, 0.4); /* Light gray */
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3B82F6; /* Progress bar blue */
+  transition: width 0.5s ease;
+}
+
+/* File input drop zone */
+.dropzone {
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 2px dashed rgba(107, 114, 128, 0.5); /* Gray dashed border */
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+}
+
+.dropzone.dragging {
+  border-color: #3B82F6; /* Blue border when dragging */
+}
+
+.dropzone:hover {
+  border-color: #3B82F6; /* Hover border color */
+}
+
+/* Text inside the dropzone */
+.dropzone p {
+  color: white;
+  font-size: 1.1rem;
+}
+
+.dropzone .file-name {
+  color: #D1D5DB; /* Light gray for the file name */
+}
+
+/* Deepfake analysis results */
+.result-container {
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.result-success {
+  color: #10B981; /* Green for success */
+}
+
+.result-failure {
+  color: #EF4444; /* Red for deepfake detection */
+}
+
+.icon {
+  margin-right: 10px;
+}
+
+/* Loading animation */
+.loading-icon {
+  animation: spin 1s linear infinite;
+  font-size: 2rem;
+  color: #3B82F6;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.3;
+}

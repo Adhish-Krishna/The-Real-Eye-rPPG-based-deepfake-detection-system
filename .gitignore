@@ -1,0 +1,9 @@
+test_videos/
+Video Deepfake Detection Service/videos/
+submission/
+Video Deepfake Detection Service/deepfake_scores.txt
+Audio Deepfake Detection Service/TestEvaluation/
+Audio Deepfake Detection Service/uploads/
+Dockerfile
+/frontend/node_modules
+/frontend/rppg ui/node_modules
